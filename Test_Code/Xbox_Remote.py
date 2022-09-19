@@ -11,11 +11,19 @@ print(gamepad)
 for event in gamepad.read_loop():
     #Boutons | buttons 
     if event.type == ecodes.EV_KEY:
-         print("this is an event", event)
-         print(type(event))
-         string = str(event)
-         print("string", string[1])
-
+        print("this is an event", event)
+        print(type(event))
+        string = str(event)
+        ID = string[33:36]
+        print("ID", ID)
+        if ID == "307":
+             print("X")
+        if ID == "308":
+             print("Y")
+        if ID == "304":
+             print("A")
+        if ID == "305":
+             print("B")
       
         
         
